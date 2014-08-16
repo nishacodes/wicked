@@ -25,7 +25,7 @@ class UsersController < ApplicationController
   # GET /users/new.json
   def new
     @user = User.new
-
+    
     respond_to do |format|
       format.html # new.html.erb
       format.json { render json: @user }
@@ -40,17 +40,19 @@ class UsersController < ApplicationController
   # POST /users
   # POST /users.json
   def create
+    # parse phone number and save it in the correct format
     @user = User.new(params[:user])
 
     respond_to do |format|
       if @user.save
-        render text: "Thank you! You will receive an SMS shortly with verification instructions."
+        # render text: "Thank you! You will receive an SMS shortly with verification instructions."
+
 
       # Instantiate a Twilio client
-      client = Twilio::REST::Client.new(TWILIO_CONFIG['sid'], TWILIO_CONFIG['token'])
+      @client = Twilio::REST::Client.new(TWILIO_CONFIG['sid'], TWILIO_CONFIG['token'])
       
       # Create and send an SMS message
-      client.account.sms.messages.create(
+      @client.account.sms.messages.create(
         from: TWILIO_CONFIG['from'],
         to: @user.phone,
         body: "Thanks for signing up. To verify your account, please reply HELLO to this message."
