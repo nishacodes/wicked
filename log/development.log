@@ -861,3 +861,169 @@ Processing by UsersController#create as HTML
   [1m[36m (1.7ms)[0m  [1mcommit transaction[0m
   Rendered text template (0.0ms)
 Completed 406 Not Acceptable in 1033.2ms (Views: 1.0ms | ActiveRecord: 10.9ms)
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+
+
+Started GET "/" for 127.0.0.1 at 2014-08-16 11:03:01 -0400
+Processing by UsersController#new as HTML
+  Rendered users/_form.html.erb (2.8ms)
+  Rendered users/new.html.erb within layouts/application (3.6ms)
+Completed 200 OK in 14.6ms (Views: 8.4ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-08-16 11:03:01 -0400
+Served asset /application.css - 200 OK (0ms)
+
+
+Started GET "/assets/pages.css?body=1" for 127.0.0.1 at 2014-08-16 11:03:01 -0400
+Served asset /pages.css - 200 OK (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-08-16 11:03:01 -0400
+Served asset /scaffolds.css - 200 OK (0ms)
+
+
+Started GET "/assets/pages.js?body=1" for 127.0.0.1 at 2014-08-16 11:03:01 -0400
+Served asset /pages.js - 200 OK (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-08-16 11:03:01 -0400
+Served asset /jquery.js - 200 OK (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-08-16 11:03:02 -0400
+Served asset /application.js - 200 OK (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-08-16 11:03:02 -0400
+Served asset /jquery_ujs.js - 200 OK (0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-08-16 11:07:43 -0400
+Processing by UsersController#new as HTML
+  Rendered users/_form.html.erb (3.5ms)
+  Rendered users/new.html.erb within layouts/application (4.2ms)
+Completed 200 OK in 43.4ms (Views: 43.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/pages.css?body=1" for 127.0.0.1 at 2014-08-16 11:07:45 -0400
+Served asset /pages.css - 200 OK (0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-08-16 11:07:45 -0400
+Served asset /application.css - 200 OK (0ms)
+
+
+Started GET "/assets/pages.js?body=1" for 127.0.0.1 at 2014-08-16 11:07:46 -0400
+Served asset /pages.js - 200 OK (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-08-16 11:07:46 -0400
+Served asset /scaffolds.css - 200 OK (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-08-16 11:07:46 -0400
+Served asset /jquery_ujs.js - 200 OK (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-08-16 11:07:46 -0400
+Served asset /jquery.js - 200 OK (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-08-16 11:07:46 -0400
+Served asset /application.js - 200 OK (0ms)
+Connecting to database specified by database.yml
+
+
+Started GET "/" for 127.0.0.1 at 2014-08-16 11:20:18 -0400
+Processing by UsersController#new as HTML
+  Rendered users/_form.html.erb (2.6ms)
+  Rendered users/new.html.erb within layouts/application (3.5ms)
+Completed 200 OK in 8.6ms (Views: 8.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-08-16 11:20:18 -0400
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/pages.css?body=1" for 127.0.0.1 at 2014-08-16 11:20:18 -0400
+Served asset /pages.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-08-16 11:20:18 -0400
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-08-16 11:20:18 -0400
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-08-16 11:20:18 -0400
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-08-16 11:20:19 -0400
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/pages.js?body=1" for 127.0.0.1 at 2014-08-16 11:20:19 -0400
+Served asset /pages.js - 304 Not Modified (0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-08-16 11:20:22 -0400
+Processing by UsersController#new as HTML
+  Rendered users/_form.html.erb (2.2ms)
+  Rendered users/new.html.erb within layouts/application (3.0ms)
+Completed 200 OK in 7.7ms (Views: 7.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-08-16 11:20:23 -0400
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/pages.css?body=1" for 127.0.0.1 at 2014-08-16 11:20:23 -0400
+Served asset /pages.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-08-16 11:20:23 -0400
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-08-16 11:20:23 -0400
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-08-16 11:20:24 -0400
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-08-16 11:20:24 -0400
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/pages.js?body=1" for 127.0.0.1 at 2014-08-16 11:20:24 -0400
+Served asset /pages.js - 304 Not Modified (0ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2014-08-16 11:20:39 -0400
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"rGjJicw+Ph/Cqbr/62cAGQwFrlI+9iMp74xFCWcldzE=", "user"=>{"name"=>"ariel", "email"=>"ariel.isaacs@gmail.com", "phone"=>"14154257945"}, "commit"=>"Create User"}
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mUser Exists (0.1ms)[0m  [1mSELECT 1 AS one FROM "users" WHERE "users"."email" = 'ariel.isaacs@gmail.com' LIMIT 1[0m
+  [1m[35mUser Exists (0.0ms)[0m  SELECT 1 AS one FROM "users" WHERE "users"."phone" = '14154257945' LIMIT 1
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "users" ("created_at", "email", "name", "phone", "updated_at", "verified") VALUES (?, ?, ?, ?, ?, ?)[0m  [["created_at", Sat, 16 Aug 2014 15:20:39 UTC +00:00], ["email", "ariel.isaacs@gmail.com"], ["name", "ariel"], ["phone", "14154257945"], ["updated_at", Sat, 16 Aug 2014 15:20:39 UTC +00:00], ["verified", nil]]
+  [1m[35m (3.1ms)[0m  commit transaction
+  Rendered text template (0.0ms)
+Completed 406 Not Acceptable in 938.5ms (Views: 0.3ms | ActiveRecord: 3.7ms)
+
+
+Started GET "/?ToCountry=US&ToState=CA&SmsMessageSid=SM10bc5a1b5b96e99383a3fd57623c3680&NumMedia=0&ToCity=WOODSIDE&FromZip=94121&SmsSid=SM10bc5a1b5b96e99383a3fd57623c3680&FromState=CA&SmsStatus=received&FromCity=SAN+FRANCISCO&Body=Hello&FromCountry=US&To=%2B16504463368&ToZip=94062&MessageSid=SM10bc5a1b5b96e99383a3fd57623c3680&AccountSid=ACcdf4226b4053c373dd92727345129b6c&From=%2B14154257945&ApiVersion=2010-04-01" for 127.0.0.1 at 2014-08-16 11:21:02 -0400
+Processing by UsersController#new as */*
+  Parameters: {"ToCountry"=>"US", "ToState"=>"CA", "SmsMessageSid"=>"SM10bc5a1b5b96e99383a3fd57623c3680", "NumMedia"=>"0", "ToCity"=>"WOODSIDE", "FromZip"=>"94121", "SmsSid"=>"SM10bc5a1b5b96e99383a3fd57623c3680", "FromState"=>"CA", "SmsStatus"=>"received", "FromCity"=>"SAN FRANCISCO", "Body"=>"Hello", "FromCountry"=>"US", "To"=>"+16504463368", "ToZip"=>"94062", "MessageSid"=>"SM10bc5a1b5b96e99383a3fd57623c3680", "AccountSid"=>"ACcdf4226b4053c373dd92727345129b6c", "From"=>"+14154257945", "ApiVersion"=>"2010-04-01"}
+  Rendered users/_form.html.erb (1.9ms)
+  Rendered users/new.html.erb within layouts/application (2.4ms)
+Completed 200 OK in 6.4ms (Views: 6.1ms | ActiveRecord: 0.0ms)

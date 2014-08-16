@@ -7,6 +7,7 @@ gem 'debugger'
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
 
+gem 'tunnlr_connector', group: :development
 gem 'sqlite3'
 gem 'twilio-ruby'
 
