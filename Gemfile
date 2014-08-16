@@ -4,12 +4,15 @@ gem 'rails', '3.2.16'
 
 gem 'devise'
 gem 'debugger'
+gem 'pg'
+gem 'taps'
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
 
 gem 'tunnlr_connector', group: :development
 gem 'sqlite3'
 gem 'twilio-ruby'
+
 
 # Gems used only for assets and not required
 # in production environments by default.

@@ -11,7 +11,16 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20140816143401) do
+ActiveRecord::Schema.define(:version => 20140816202941) do
+
+  create_table "known_items", :force => true do |t|
+    t.string "upc"
+    t.float  "wic_score"
+    t.string "wic_notes"
+    t.text   "allergens"
+    t.text   "positives"
+    t.string "size"
+  end
 
   create_table "users", :force => true do |t|
     t.string   "name"
@@ -20,6 +29,16 @@ ActiveRecord::Schema.define(:version => 20140816143401) do
     t.boolean  "verified"
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
+  end
+
+  create_table "wicrules", :force => true do |t|
+    t.string "product"
+    t.string "brand"
+    t.text   "allowed"
+    t.text   "disallowed"
+    t.text   "size"
+    t.string "units"
+    t.string "notes"
   end
 
 end
