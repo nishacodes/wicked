@@ -1,4 +1,15 @@
 [
-        "{"product": "milk", "brand": null, "allowed": null, "disallowed": "['flavored', 'organic', 'sweetened condensed', 'buttermilk', 'added calcium', 'reduced fat']", "size": null, "units": null, "notes": "Must buy the least expensive of the type of milk. Buy the largest container available."}",
-]
+        {"product": "milk", "brand": null, "allowed": null, "disallowed": "['flavored', 'organic', 'sweetened condensed', 'buttermilk', 'added calcium', 'reduced fat]", "size": null, "units": null, "notes": "Must buy the least expensive of the type of milk. Buy the largest container available."},
+        {"product": "evaporated milk", "brand": null, "allowed": null, "disallowed": null, "size": "[12]", "units": "oz", "notes": null},   
+        {"product": "evaporated milk", "brand": null, "allowed": null, "disallowed": null, "size": "[12]", "units": "oz", "notes": null},
+        {"product": "canned milk", "brand": null, "allowed": null, "disallowed": null, "size": "[12]", "units": "oz", "notes": ""},
+        {"product": "dry milk", "brand": null, "allowed": null, "disallowed": null, "size": "[25.6]", "units": "oz", "notes": null},
+        {"product": "powdered milk", "brand": null, "allowed": null, "disallowed": null, "size": "[25.6]", "units": "oz", "notes": null},
+        {"product": "soy milk", "brand": "8th continent", "allowed": "['original', 'vanilla']", "disallowed": null, "size": "[32, 64]", "units": "oz", "notes": null},
+        {"product": "soy milk", "brand": "silk", "allowed": "['original']", "disallowed": null, "size": "[32, 64, 128]", "units": "oz", "notes": null},
+        {"product": "soy milk", "brand": "pacific natural foods", "allowed": "['original', 'vanilla']", "disallowed": null, "size": "[32]", "units": "oz", "notes": null},
+        {"product": "soy milk", "brand": "westsoy", "allowed": "['plain', 'vanilla']", "disallowed": null, "size": "[32, 64]", "units": "oz", "notes": null},
+        {"product": "oatmeal", "brand": "quaker", "allowed": "[instant]", "disallowed": null, "size": null, "units": null, "notes": null}
 
+
+]
