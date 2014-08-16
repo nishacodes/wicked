@@ -11,6 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
+<<<<<<< HEAD
 ActiveRecord::Schema.define(:version => 20140816202941) do
 
   create_table "known_items", :force => true do |t|
@@ -20,6 +21,19 @@ ActiveRecord::Schema.define(:version => 20140816202941) do
     t.text   "allergens"
     t.text   "positives"
     t.string "size"
+=======
+ActiveRecord::Schema.define(:version => 20140816212616) do
+
+  create_table "messages", :force => true do |t|
+    t.string   "body"
+    t.string   "from"
+    t.integer  "user_id"
+    t.datetime "created_at",     :null => false
+    t.datetime "updated_at",     :null => false
+    t.string   "image"
+    t.string   "upc"
+    t.string   "item_requested"
+>>>>>>> c530a79bf00a8589d5fcadbb738dbca2d73407fb
   end
 
   create_table "users", :force => true do |t|
