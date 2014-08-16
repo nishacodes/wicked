@@ -1,2 +1,2 @@
 path = File.join(Rails.root, "config/twilio.yml")
-TWILIO_CONFIG = YAML.load(File.read(path))[Rails.env] || {'sid' => 'ACcdf4226b4053c373dd92727345129b6c', 'token' => '59229d72f0671bf8f8d818cb6a4adf81'}
+TWILIO_CONFIG = YAML.load(File.read(path))[Rails.env] || {'sid' => 'ACcdf4226b4053c373dd92727345129b6c', 'from'=> '6504463368', 'token' => '59229d72f0671bf8f8d818cb6a4adf81'}

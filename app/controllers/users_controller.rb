@@ -45,6 +45,17 @@ class UsersController < ApplicationController
     respond_to do |format|
       if @user.save
         render text: "Thank you! You will receive an SMS shortly with verification instructions."
+
+      # Instantiate a Twilio client
+      client = Twilio::REST::Client.new(TWILIO_CONFIG['sid'], TWILIO_CONFIG['token'])
+      
+      # Create and send an SMS message
+      client.account.sms.messages.create(
+        from: TWILIO_CONFIG['from'],
+        to: @user.phone,
+        body: "Thanks for signing up. To verify your account, please reply HELLO to this message."
+      )
+
         # format.html { redirect_to @user, notice: 'User was successfully created.' }
         # format.json { render json: @user, status: :created, location: @user }
       else
