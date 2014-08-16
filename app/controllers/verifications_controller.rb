@@ -4,7 +4,11 @@ class VerificationsController < ApplicationController
  
   def create
     @user.update_attribute(:verified, true)
-    # You could send another message acknowledging the verificaton
+    client = Twilio::REST::Client.new(TWILIO_CONFIG['sid'], TWILIO_CONFIG['token'])
+    client.account.sms.messages.create(
+        from: TWILIO_CONFIG['from'],
+        to: @user.phone,
+        body: "Congrats, you signed up"
     head :ok
   end
  

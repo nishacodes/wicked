@@ -1027,3 +1027,232 @@ Processing by UsersController#new as */*
   Rendered users/_form.html.erb (1.9ms)
   Rendered users/new.html.erb within layouts/application (2.4ms)
 Completed 200 OK in 6.4ms (Views: 6.1ms | ActiveRecord: 0.0ms)
+Connecting to database specified by database.yml
+  [1m[36m (0.4ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+Migrating to CreateUsers (20140816142923)
+Migrating to RemovePasswordFromUsers (20140816143401)
+  [1m[35m (0.1ms)[0m  select sqlite_version(*)
+  [1m[36m (0.1ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+Connecting to database specified by database.yml
+
+
+Started GET "/" for 127.0.0.1 at 2014-08-16 11:34:22 -0400
+Processing by UsersController#new as HTML
+  Rendered users/_form.html.erb (14.8ms)
+  Rendered users/new.html.erb within layouts/application (21.3ms)
+Warning. Error encountered while saving cache /Users/arielisaacs/Projects/wicked/tmp/cache/sass/45e787656e6d082851a40bb7e863d094b83010ed/pages.css.scssc: can't dump anonymous class #<Class:0x007fe0acee5f40>
+
+Compiled pages.css  (8ms)  (pid 27546)
+Warning. Error encountered while saving cache /Users/arielisaacs/Projects/wicked/tmp/cache/sass/45e787656e6d082851a40bb7e863d094b83010ed/scaffolds.css.scssc: can't dump anonymous class #<Class:0x007fe0acee5f40>
+
+Compiled scaffolds.css  (9ms)  (pid 27546)
+Compiled application.css  (72ms)  (pid 27546)
+Compiled jquery.js  (3ms)  (pid 27546)
+Compiled jquery_ujs.js  (0ms)  (pid 27546)
+Compiled pages.js  (257ms)  (pid 27546)
+Compiled application.js  (279ms)  (pid 27546)
+Completed 200 OK in 484.1ms (Views: 447.1ms | ActiveRecord: 5.0ms)
+
+
+Started GET "/assets/pages.css?body=1" for 127.0.0.1 at 2014-08-16 11:34:23 -0400
+Served asset /pages.css - 200 OK (4ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-08-16 11:34:23 -0400
+Served asset /jquery_ujs.js - 200 OK (3ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-08-16 11:34:23 -0400
+Served asset /application.css - 200 OK (9ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-08-16 11:34:23 -0400
+Served asset /jquery.js - 200 OK (4ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-08-16 11:34:23 -0400
+Served asset /application.js - 200 OK (5ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-08-16 11:34:23 -0400
+Served asset /scaffolds.css - 200 OK (1ms)
+
+
+Started GET "/assets/pages.js?body=1" for 127.0.0.1 at 2014-08-16 11:34:23 -0400
+Served asset /pages.js - 200 OK (1ms)
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+
+
+Started GET "/" for 127.0.0.1 at 2014-08-16 11:38:55 -0400
+Processing by UsersController#new as HTML
+  Rendered users/_form.html.erb (14.6ms)
+  Rendered users/new.html.erb within layouts/application (22.2ms)
+Completed 200 OK in 125.4ms (Views: 55.5ms | ActiveRecord: 1.9ms)
+
+
+Started GET "/assets/pages.css?body=1" for 127.0.0.1 at 2014-08-16 11:38:56 -0400
+Served asset /pages.css - 304 Not Modified (10ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-08-16 11:38:56 -0400
+Served asset /jquery.js - 304 Not Modified (3ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-08-16 11:38:56 -0400
+Served asset /scaffolds.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-08-16 11:38:56 -0400
+Served asset /jquery_ujs.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-08-16 11:38:56 -0400
+Served asset /application.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-08-16 11:38:56 -0400
+Served asset /application.js - 304 Not Modified (43ms)
+
+
+Started GET "/assets/pages.js?body=1" for 127.0.0.1 at 2014-08-16 11:38:56 -0400
+Served asset /pages.js - 304 Not Modified (1ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2014-08-16 11:39:09 -0400
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"IkQnYzfrOgLOL9hY8xPZdSknvabxD62eGjrmzEj4u+k=", "user"=>{"name"=>"Ariel", "email"=>"ariel.isaacs@gmail.com", "phone"=>"4154257945"}, "commit"=>"Create User"}
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mUser Exists (0.2ms)[0m  SELECT 1 AS one FROM "users" WHERE "users"."email" = 'ariel.isaacs@gmail.com' LIMIT 1
+  [1m[36mUser Exists (0.1ms)[0m  [1mSELECT 1 AS one FROM "users" WHERE "users"."phone" = '4154257945' LIMIT 1[0m
+  [1m[35mSQL (3.7ms)[0m  INSERT INTO "users" ("created_at", "email", "name", "phone", "updated_at", "verified") VALUES (?, ?, ?, ?, ?, ?)  [["created_at", Sat, 16 Aug 2014 15:39:09 UTC +00:00], ["email", "ariel.isaacs@gmail.com"], ["name", "Ariel"], ["phone", "4154257945"], ["updated_at", Sat, 16 Aug 2014 15:39:09 UTC +00:00], ["verified", nil]]
+  [1m[36m (0.8ms)[0m  [1mcommit transaction[0m
+  Rendered text template (0.0ms)
+Completed 406 Not Acceptable in 1234.1ms (Views: 2.6ms | ActiveRecord: 4.9ms)
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+
+
+Started GET "/" for 127.0.0.1 at 2014-08-16 11:48:59 -0400
+Processing by UsersController#new as HTML
+  Rendered users/_form.html.erb (13.9ms)
+  Rendered users/new.html.erb within layouts/application (20.2ms)
+Completed 200 OK in 108.3ms (Views: 49.9ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/assets/pages.css?body=1" for 127.0.0.1 at 2014-08-16 11:48:59 -0400
+Served asset /pages.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-08-16 11:48:59 -0400
+Served asset /application.js - 304 Not Modified (6ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-08-16 11:48:59 -0400
+Served asset /application.css - 304 Not Modified (4ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-08-16 11:48:59 -0400
+Served asset /jquery.js - 304 Not Modified (50ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-08-16 11:48:59 -0400
+Served asset /jquery_ujs.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-08-16 11:48:59 -0400
+Served asset /scaffolds.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/pages.js?body=1" for 127.0.0.1 at 2014-08-16 11:48:59 -0400
+Served asset /pages.js - 304 Not Modified (1ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2014-08-16 11:49:03 -0400
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"IkQnYzfrOgLOL9hY8xPZdSknvabxD62eGjrmzEj4u+k=", "user"=>{"name"=>"Ariel", "email"=>"ariel.isaacs@gmail.com", "phone"=>"4154257945"}, "commit"=>"Create User"}
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mUser Exists (0.1ms)[0m  SELECT 1 AS one FROM "users" WHERE "users"."email" = 'ariel.isaacs@gmail.com' LIMIT 1
+  [1m[36mUser Exists (0.1ms)[0m  [1mSELECT 1 AS one FROM "users" WHERE "users"."phone" = '4154257945' LIMIT 1[0m
+  [1m[35mSQL (1.9ms)[0m  INSERT INTO "users" ("created_at", "email", "name", "phone", "updated_at", "verified") VALUES (?, ?, ?, ?, ?, ?)  [["created_at", Sat, 16 Aug 2014 15:49:03 UTC +00:00], ["email", "ariel.isaacs@gmail.com"], ["name", "Ariel"], ["phone", "4154257945"], ["updated_at", Sat, 16 Aug 2014 15:49:03 UTC +00:00], ["verified", nil]]
+  [1m[36m (0.8ms)[0m  [1mcommit transaction[0m
+  Rendered text template (0.0ms)
+Completed 406 Not Acceptable in 1589.3ms (Views: 1.7ms | ActiveRecord: 3.0ms)
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+
+
+Started GET "/" for 127.0.0.1 at 2014-08-16 12:04:31 -0400
+Processing by UsersController#new as HTML
+  Rendered users/_form.html.erb (7.5ms)
+  Rendered users/new.html.erb within layouts/application (10.3ms)
+Completed 200 OK in 80.2ms (Views: 25.1ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/assets/pages.css?body=1" for 127.0.0.1 at 2014-08-16 12:04:31 -0400
+Served asset /pages.css - 304 Not Modified (6ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-08-16 12:04:31 -0400
+Served asset /scaffolds.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/pages.js?body=1" for 127.0.0.1 at 2014-08-16 12:04:31 -0400
+Served asset /pages.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-08-16 12:04:31 -0400
+Served asset /jquery_ujs.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-08-16 12:04:31 -0400
+Served asset /jquery.js - 304 Not Modified (3ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-08-16 12:04:31 -0400
+Served asset /application.css - 304 Not Modified (48ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-08-16 12:04:31 -0400
+Served asset /application.js - 304 Not Modified (3ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2014-08-16 12:04:34 -0400
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"IkQnYzfrOgLOL9hY8xPZdSknvabxD62eGjrmzEj4u+k=", "user"=>{"name"=>"Ariel", "email"=>"ariel.isaacs@gmail.com", "phone"=>"4154257945"}, "commit"=>"Create User"}
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mUser Exists (0.2ms)[0m  SELECT 1 AS one FROM "users" WHERE "users"."email" = 'ariel.isaacs@gmail.com' LIMIT 1
+  [1m[36mUser Exists (0.1ms)[0m  [1mSELECT 1 AS one FROM "users" WHERE "users"."phone" = '4154257945' LIMIT 1[0m
+  [1m[35mSQL (1.3ms)[0m  INSERT INTO "users" ("created_at", "email", "name", "phone", "updated_at", "verified") VALUES (?, ?, ?, ?, ?, ?)  [["created_at", Sat, 16 Aug 2014 16:04:34 UTC +00:00], ["email", "ariel.isaacs@gmail.com"], ["name", "Ariel"], ["phone", "4154257945"], ["updated_at", Sat, 16 Aug 2014 16:04:34 UTC +00:00], ["verified", nil]]
+  [1m[36m (0.6ms)[0m  [1mcommit transaction[0m
+  Rendered text template (0.0ms)
+Completed 406 Not Acceptable in 1389.0ms (Views: 1.0ms | ActiveRecord: 2.2ms)
+Connecting to database specified by database.yml
+
+
+Started GET "/verification" for 127.0.0.1 at 2014-08-16 12:07:48 -0400
+
+ActionController::RoutingError (No route matches [GET] "/verification"):
+  actionpack (3.2.16) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (3.2.16) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.16) lib/rails/rack/logger.rb:32:in `call_app'
+  railties (3.2.16) lib/rails/rack/logger.rb:16:in `block in call'
+  activesupport (3.2.16) lib/active_support/tagged_logging.rb:22:in `tagged'
+  railties (3.2.16) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.16) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.5) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.5) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.16) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.5) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.16) lib/action_dispatch/middleware/static.rb:63:in `call'
+  railties (3.2.16) lib/rails/engine.rb:484:in `call'
+  railties (3.2.16) lib/rails/application.rb:231:in `call'
+  rack (1.4.5) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.16) lib/rails/rack/log_tailer.rb:17:in `call'
+  rack (1.4.5) lib/rack/handler/webrick.rb:59:in `service'
+  /Users/arielisaacs/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/2.0.0/webrick/httpserver.rb:138:in `service'
+  /Users/arielisaacs/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/2.0.0/webrick/httpserver.rb:94:in `run'
+  /Users/arielisaacs/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/2.0.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /Users/arielisaacs/.rvm/gems/ruby-2.0.0-p247@rails-3.2.16/gems/actionpack-3.2.16/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.6ms)
