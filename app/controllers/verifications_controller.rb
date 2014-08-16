@@ -15,6 +15,7 @@ class VerificationsController < ApplicationController
         body: "You are verified!"
       )
 
+
     head :ok
   end
  
