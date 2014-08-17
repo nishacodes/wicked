@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20140817005130) do
+ActiveRecord::Schema.define(:version => 20140817134907) do
 
   create_table "items", :force => true do |t|
     t.string   "brand"
@@ -59,6 +59,12 @@ ActiveRecord::Schema.define(:version => 20140817005130) do
     t.boolean  "verified"
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
+  end
+
+  create_table "wic_items", :force => true do |t|
+    t.string "upc"
+    t.string "state"
+    t.string "category"
   end
 
   create_table "wicrules", :force => true do |t|

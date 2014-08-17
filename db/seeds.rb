@@ -16,3 +16,8 @@ rules = JSON.parse(File.read('db/wicrules.json'))
 rules.each do |rule|
   Wicrule.create(rule)
 end
+
+wicitems = JSON.parse(File.read('db/wicitems.json'))
+wicitems.each do |wicitem|
+  Wic_item.create(wicitem)
+end
