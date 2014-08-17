@@ -1,0 +1,177 @@
+body {
+  margin: 0;
+  height: 100%;
+  font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+  color: #5A5758;
+  
+}
+.top-bar {
+  width: 100%;
+  height: 40px;
+  background-color: #50005A;
+  position: fixed;
+  z-index: 2;
+}
+.logo {
+  float: left;
+  margin: 2px;
+  margin-right: -40px;
+  position: absolute;
+}
+#search-bar {
+  float: right;
+  margin: 8px;
+  width: calc(100% - 54px);
+  height: 22px;
+  left: 40px;
+  border: none;
+  border-radius: 1px;
+  position: absolute;
+  top: 0px;
+}
+#search-form {
+  width: 100%;
+  float: right;
+  margin: 10px;
+}
+.main-page {
+  background-color: #F1F1EF;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: 40px;
+}
+.main-page > div:nth-of-type(2){
+  width: 88%;
+  float: left;
+}
+.main-top h2{
+  margin-left: 10px;
+  z-index: 1;
+}
+.activity-card {
+  background-color: white;
+  width: 100%;
+  height: 120px;
+  margin: 10px;
+  float: left;
+  border: 2px solid #F1F1EF;
+  margin-bottom: 0px;
+}
+
+.activity-card:hover {
+  border: 2px solid #00AEBA;
+  cursor: pointer;
+}
+.activity-card > div:first-of-type {
+  float: left;
+  height: 100%;
+  width: 50%;
+}
+.activity-card h2 { 
+  margin: 10px;
+}
+.temp-img2 {
+  width: 150px;
+  height: 90px;
+  background-size: contain;
+  margin: 15px;
+}
+
+.temp-img3 {
+  width: 100px;
+  height: 100px;
+  background-size: contain;
+  margin: 15px;
+}
+
+
+
+  
+  
+.profile {
+  float: right;
+  width: 270px;
+  height: 500px;
+}
+.profile-top {
+  height: 100px;
+  margin-top: 20px;
+  border-bottom: 1px solid #D7D7D7;
+  margin-right: 20px;
+  margin-left: 5px;
+}
+.temp-img {
+  height: 60px;
+  width: 60px;
+  background-color: grey;
+  margin: 10px;
+  margin-top: 2px;
+  float: left;
+  margin-left: 2px;
+}
+#profile-bottom {
+  margin: 5px;
+  margin-top: 20px;
+  position: absolute;
+  top: -200px;
+  background-color: #F1F1EF;
+  border-radius: 2px;
+  margin-left: 10px;
+  
+}
+
+.pref:first-of-type {
+  margin-top: 20px;
+}
+.pref {
+  width: 250px;
+  height: 30px;
+}
+.pref h3:first-of-type {
+  float: left;
+}
+.pref h3:last-of-type {
+  float: right;
+  margin-right: 10px;
+  
+}
+.pref > div {
+  height: 20px;
+  width: 40px;
+  background-color: #D7D7D7;
+  border-radius: 10px;
+  position: absolute;
+  right: 50px;
+  
+}
+.pref > div > div {
+  height: 18px;
+  width: 18px;
+  background-color: white;
+  border-radius: 10px;
+  margin: 1px;
+  float: left;
+  position: absolute;
+  left: 0px;
+}
+  
+h1 {
+  font-size: 20px;
+  margin-top: 10px;
+  margin-bottom: 0px;
+  margin-left: 10px;
+  font-weight: 200;
+}
+h2 {
+  font-size: 15px;
+  font-weight: 200;
+  margin: 0px;
+  margin-top: 2px;
+}
+h3 {
+  font-size: 10px;
+  font-weight: 200;
+  margin: 0px;
+  margin-top: 2px;
+}

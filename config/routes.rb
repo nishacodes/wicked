@@ -4,6 +4,9 @@ Wicked::Application.routes.draw do
   resource  :verifications
   root to: 'users#new'
 
+  match 'results' => 'verifications#show'
+  match 'upcresult' => 'verifications#upcresult'
+
   # root to: "pages#index"
 
   # The priority is based upon order of creation:

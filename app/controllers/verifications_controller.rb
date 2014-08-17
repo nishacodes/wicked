@@ -1,6 +1,6 @@
 class VerificationsController < ApplicationController
   require 'net/http'
-  before_filter :get_user
+  before_filter :get_user, :only => [ :create] 
  
   def create
     
@@ -86,6 +86,7 @@ class VerificationsController < ApplicationController
             @wicknown = Wic_item.find_by_upc(@message.body)
             if @wicknown != nil
               @response = "You requested #{@itemRequest}. Congrats, it is Wic approved!"
+              @secondresponse = "FYI, it is high in Vitamin C and helps prevent heart disease and prenatal problems. Enjoy :)"
             # end
             elsif @wicknown == nil
               puts "known item?"
@@ -182,7 +183,26 @@ class VerificationsController < ApplicationController
     head :ok
   end
 
+  def show
+    # @wic_item = Wic_item.find_by_upc('3680013361')
+    # @wic_items.each do |wicitem|
+      # uri = URI("http://api.simpleupc.com/v1.php?auth=gqA1YvUeSLhWA6h5dvICvzUaYe3Dff8M&method=FetchProductByUPC&upc=3680013361&returnFormat=json")
+      #   res = Net::HTTP.get_response(uri)
+      #   # if there's results, save it in the items database
+      #   if res.body
+      #     item_info = JSON.parse(res.body)["result"]
+      #     if item_info 
+      #        @item = Item.create(item_info)
+      #     end
+      #   end
+    # end
+    @items = Item.all
 
+  end
+
+  def upcresult
+    @item = Item.find(491)
+  end
 
  
   private

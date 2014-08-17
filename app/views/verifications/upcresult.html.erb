@@ -1,0 +1,81 @@
+
+
+<div class="top-bar">
+        <img src="logo.png" class="logo">
+        <form id="search-form">
+          <input type="text" id="search-bar">
+        </form>
+      </div>
+      <div class="main-page">
+        <div id="profile-bottom">
+          <div class="pref"><h3>WIC</h3><div><div class="dot"></div></div><h3>OFF</h3></div>
+          <div class="pref"><h3>Heart Healthy</h3><div><div class="dot"></div></div><h3>OFF</h3></div>
+          <div class="pref"><h3>Lowers Blood Pressure</h3><div><div class="dot"></div></div><h3>OFF</h3></div>
+          <div class="pref"><h3>Nut Free</h3><div><div class="dot"></div></div><h3>OFF</h3></div>
+          <div class="pref"><h3>Gluton Free</h3><div><div class="dot"></div></div><h3>OFF</h3></div>
+        </div>
+        <div class="main-top" id="filter"><!-- <h1>Search</h1><h2>Filter</h2> --></div>
+        <div>
+          
+        
+          <div class="activity-card">
+            <div><div class="temp-img3" style="background-image: url('juice.jpg'); max-height: 100%;"></div>
+            </div>
+            <div><h2><%= @item.brand + " " + @item.description %></h2>
+              <span><img src="wic-stamp.png" style="padding: 5px; width: 40px;"><img src="vitc-stamp.png"style="padding: 5px; width: 40px;"> </span>
+            </div>
+            
+          </div>
+          <!-- <div class="activity-card"></div>
+        </div> -->
+      </div>
+    </body>
+      <script>
+        function switchPref(e) {
+          e.style.transition = "margin-left 0.2s linear 0s";
+          if (e.style.margin-left=="0px") {
+            
+            e.style.left = "20px";
+          
+          }
+          else {
+            e.style.left = "0px";
+          }
+        }
+        function displayFilter() {
+          console.log("hell0");
+          console.log(filterHidden);
+          preferences.style.transition = "top 0.5s linear 0s";
+          if (filterHidden==true) {
+            
+            preferences.style.top = "45px";
+            console.log(preferences.style.top);
+            filterHidden=false;
+          }
+          else {
+            preferences.style.top = "-200px";
+            filterHidden=true;
+          }
+        }
+      
+        var filter = document.getElementById("filter");
+        var preferences = document.getElementById("profile-bottom");
+        var filterHidden = true;
+        filter.addEventListener("touchstart", displayFilter, false);
+        filter.addEventListener("click", displayFilter, false);
+        
+        document.getElementByClassName("dot")[0].addEventListener("touchstart", switchPref, false);
+        document.getElementByClassName("dot")[1].addEventListener("touchstart", switchPref, false);
+        document.getElementByClassName("dot")[2].addEventListener("touchstart", switchPref, false);
+        document.getElementByClassName("dot")[3].addEventListener("touchstart", switchPref, false);
+        document.getElementByClassName("dot")[4].addEventListener("touchstart", switchPref, false);
+        document.getElementByClassName("dot")[0].addEventListener("click", switchPref, false);
+        document.getElementByClassName("dot")[1].addEventListener("click", switchPref, false);
+        document.getElementByClassName("dot")[2].addEventListener("click", switchPref, false);
+        document.getElementByClassName("dot")[3].addEventListener("click", switchPref, false);
+        document.getElementByClassName("dot")[4].addEventListener("click", switchPref, false);
+        
+        
+
+
+      </script>
