@@ -1,0 +1,27 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  brand: MyString
+  manufacturer: MyString
+  category: MyString
+  product_has_image: MyString
+  container: MyString
+  size: MyString
+  units: MyString
+  upc: MyString
+  description: MyString
+  ingredients: MyString
+  catID: MyString
+
+two:
+  brand: MyString
+  manufacturer: MyString
+  category: MyString
+  product_has_image: MyString
+  container: MyString
+  size: MyString
+  units: MyString
+  upc: MyString
+  description: MyString
+  ingredients: MyString
+  catID: MyString

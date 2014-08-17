@@ -146,6 +146,7 @@ DEPENDENCIES
   debugger
   devise
   jquery-rails
+  json
   pg
   rails (= 3.2.16)
   sass-rails (~> 3.2.3)

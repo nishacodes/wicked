@@ -55,8 +55,8 @@ class UsersController < ApplicationController
       @client.account.sms.messages.create(
         from: TWILIO_CONFIG['from'],
         to: @user.phone,
-        body: "Thanks for signing up. To verify your account, please reply 'yes' to this message.",
-        mediaurl: ""
+        body: "Thanks for signing up. To verify your account, please reply 'yes' to this message."
+        # mediaurl: "http://s3.amazonaws.com/simpleupc/images/full/3bdc2416fbb17d90.jpg"
       )
 
         # format.html { redirect_to @user, notice: 'User was successfully created.' }

@@ -11,8 +11,26 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-<<<<<<< HEAD
-ActiveRecord::Schema.define(:version => 20140816202941) do
+ActiveRecord::Schema.define(:version => 20140817005130) do
+
+  create_table "items", :force => true do |t|
+    t.string   "brand"
+    t.string   "manufacturer"
+    t.string   "category"
+    t.string   "ProductHasImage"
+    t.string   "container"
+    t.string   "size"
+    t.string   "units"
+    t.string   "upc"
+    t.string   "description"
+    t.string   "ingredients"
+    t.string   "catID"
+    t.datetime "created_at",               :null => false
+    t.datetime "updated_at",               :null => false
+    t.string   "ProductHasNutritionFacts"
+    t.string   "image"
+    t.string   "imagethumb"
+  end
 
   create_table "known_items", :force => true do |t|
     t.string "upc"
@@ -21,8 +39,7 @@ ActiveRecord::Schema.define(:version => 20140816202941) do
     t.text   "allergens"
     t.text   "positives"
     t.string "size"
-=======
-ActiveRecord::Schema.define(:version => 20140816212616) do
+  end
 
   create_table "messages", :force => true do |t|
     t.string   "body"
@@ -33,7 +50,6 @@ ActiveRecord::Schema.define(:version => 20140816212616) do
     t.string   "image"
     t.string   "upc"
     t.string   "item_requested"
->>>>>>> c530a79bf00a8589d5fcadbb738dbca2d73407fb
   end
 
   create_table "users", :force => true do |t|
