@@ -81,11 +81,52 @@ class VerificationsController < ApplicationController
         if @item
           @itemRequest = @item.brand + " " + @item.description
           @response = "You requested #{@itemRequest}. Let me see if that is approved..."
+            @wicknown = Wic_item.find_by_upc(@item.upc)
+            if @wicknown != nil
+              @response = "Congrats, you picked a Wic approved item!"
+            end
+            elsif @wicknown == nil
+              @knownitem = Known_item.find_by_upc(@item.upc)
+              if @knownitem != nil
+                @notes = @knownitem.wic_notes
+                if @knownitem.wic_score < 0.5
+                  @response = "#{@itemRequest} is probably not approved. #{@notes}"
+                end
+                elsif @knownitem.wic_score < 0.8
+                 @response = "#{@itemRequest} is probably approved #{@notes}"
+                end
+                else
+                  @response = "#{@itemRequest} is approved! #{@notes}"
+                end
+              end
+            end
+            else
+              query = Wicrule.uniq.pluck(:product)
+              longest_found = 0
+              found = ""
+              @result = query.each do |item|
+                a = item.find_longest_common_substring(item, @item.category)
+                if a > longest_found
+                  longest_found = a
+                  found = item
+                  @response = item
+                end
+
+              end
+              end
+            end
+            
+
+
           # INSERT LOGIC FOR DETERMINING IF IT IS WIC APPROVED 
           # @response =
           # link to view of item page
         else
           @response = "Hmm, I could not find an item with that UPC number. Please try again."
+          @wicknown =  Wic_item.find_by_upc(@message.upc)
+          if @wicknown != nil
+            @response = "Congrats, you picked a Wic approved item!"
+          end
         end
 
       # DETERMINE RESPONSE WITH GENERIC REQUEST
@@ -116,6 +157,29 @@ class VerificationsController < ApplicationController
     head :ok
   end
 
+
+def self.find_longest_common_substring(s1, s2)
+  if (s1 == "" || s2 == "")
+    return ""
+  end
+  m = Array.new(s1.length){ [0] * s2.length }
+  longest_length, longest_end_pos = 0,0
+  (0 .. s1.length - 1).each do |x|
+    (0 .. s2.length - 1).each do |y|
+      if s1[x] == s2[y]
+        m[x][y] = 1
+        if (x > 0 && y > 0)
+          m[x][y] += m[x-1][y-1]
+        end
+        if m[x][y] > longest_length
+          longest_length = m[x][y]
+          longest_end_pos = x
+        end
+      end
+    end
+  end
+  return longest_length
+end
  
   private
   def get_user
