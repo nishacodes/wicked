@@ -1438,3 +1438,471 @@ WARNING: Can't verify CSRF token authenticity
   [1m[35m (0.4ms)[0m  UPDATE "items" SET "image" = 'https://s3.amazonaws.com/simpleupc-images/g1/full/4e0f6da0a2dc8a0e.jpg', "imagethumb" = 'https://s3.amazonaws.com/simpleupc-images/g1/thumb/4e0f6da0a2dc8a0e.jpg', "updated_at" = '2014-08-17 01:38:58.760777' WHERE "items"."id" = 32
   [1m[36m (2.4ms)[0m  [1mcommit transaction[0m
 Completed 200 OK in 654.4ms (ActiveRecord: 8.8ms)
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+
+
+Started GET "/" for 127.0.0.1 at 2014-08-17 09:20:45 -0400
+Processing by UsersController#new as HTML
+  Rendered users/_form.html.erb (100.4ms)
+  Rendered users/new.html.erb within layouts/application (107.0ms)
+Completed 200 OK in 303.4ms (Views: 255.2ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-08-17 09:20:45 -0400
+Processing by UsersController#new as HTML
+  Rendered users/_form.html.erb (3.0ms)
+  Rendered users/new.html.erb within layouts/application (4.0ms)
+Completed 200 OK in 9.0ms (Views: 8.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-08-17 09:20:46 -0400
+Served asset /application.css - 304 Not Modified (3ms)
+
+
+Started GET "/assets/pages.css?body=1" for 127.0.0.1 at 2014-08-17 09:20:46 -0400
+Served asset /pages.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-08-17 09:20:46 -0400
+Served asset /scaffolds.css - 304 Not Modified (3ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-08-17 09:20:46 -0400
+Served asset /jquery.js - 304 Not Modified (3ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-08-17 09:20:46 -0400
+Served asset /jquery_ujs.js - 304 Not Modified (3ms)
+
+
+Started GET "/assets/pages.js?body=1" for 127.0.0.1 at 2014-08-17 09:20:46 -0400
+Served asset /pages.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-08-17 09:20:46 -0400
+Served asset /application.js - 304 Not Modified (4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-08-17 09:21:20 -0400
+Processing by UsersController#new as HTML
+  Rendered users/_form.html.erb (3.5ms)
+  Rendered users/new.html.erb within layouts/application (4.5ms)
+Completed 200 OK in 77.0ms (Views: 76.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-08-17 09:21:22 -0400
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/pages.css?body=1" for 127.0.0.1 at 2014-08-17 09:21:22 -0400
+Served asset /pages.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-08-17 09:21:22 -0400
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-08-17 09:21:22 -0400
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-08-17 09:21:22 -0400
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-08-17 09:21:22 -0400
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/pages.js?body=1" for 127.0.0.1 at 2014-08-17 09:21:22 -0400
+Served asset /pages.js - 304 Not Modified (0ms)
+Connecting to database specified by database.yml
+  [1m[36m (0.1ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+Migrating to CreateUsers (20140816142923)
+Migrating to RemovePasswordFromUsers (20140816143401)
+Migrating to CreateWicrules (20140816201446)
+Migrating to CreateKnownItems (20140816202941)
+Migrating to CreateMessages (20140816203245)
+Migrating to AddImageToMessage (20140816205521)
+Migrating to AddColumnsToMessages (20140816212616)
+Migrating to CreateItems (20140816222017)
+Migrating to CreateWicKnowns (20140816224215)
+  [1m[35m (0.1ms)[0m  select sqlite_version(*)
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.4ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ('20140816224215')
+  [1m[36m (40.6ms)[0m  [1mcommit transaction[0m
+Migrating to RenameColumnsInItems (20140816235857)
+Migrating to AddImageToItems (20140817004244)
+Migrating to AddImagethumbToItems (20140817005130)
+  [1m[35m (0.2ms)[0m  SELECT "schema_migrations"."version" FROM "schema_migrations" 
+
+
+Started POST "/verifications" for 127.0.0.1 at 2014-08-17 09:28:52 -0400
+Processing by VerificationsController#create as */*
+  Parameters: {"ToCountry"=>"US", "ToState"=>"CA", "SmsMessageSid"=>"SMe9fd1feb512c9d62a841300315204e71", "NumMedia"=>"0", "ToCity"=>"WOODSIDE", "FromZip"=>"10010", "SmsSid"=>"SMe9fd1feb512c9d62a841300315204e71", "FromState"=>"NY", "SmsStatus"=>"received", "FromCity"=>"NEW YORK", "Body"=>"689544080008", "FromCountry"=>"US", "To"=>"+16504463368", "ToZip"=>"94062", "MessageSid"=>"SMe9fd1feb512c9d62a841300315204e71", "AccountSid"=>"ACcdf4226b4053c373dd92727345129b6c", "From"=>"+19174990390", "ApiVersion"=>"2010-04-01"}
+WARNING: Can't verify CSRF token authenticity
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."phone" = '+19174990390' LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (72.6ms)[0m  [1mINSERT INTO "messages" ("body", "created_at", "from", "image", "item_requested", "upc", "updated_at", "user_id") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["body", "689544080008"], ["created_at", Sun, 17 Aug 2014 13:28:52 UTC +00:00], ["from", nil], ["image", nil], ["item_requested", nil], ["upc", nil], ["updated_at", Sun, 17 Aug 2014 13:28:52 UTC +00:00], ["user_id", nil]]
+  [1m[35m (1.7ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "items" ("ProductHasImage", "ProductHasNutritionFacts", "brand", "catID", "category", "container", "created_at", "description", "image", "imagethumb", "ingredients", "manufacturer", "size", "units", "upc", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)  [["ProductHasImage", true], ["ProductHasNutritionFacts", true], ["brand", "Fage"], ["catID", "702100"], ["category", "Yogurt"], ["container", "Plastic Container"], ["created_at", Sun, 17 Aug 2014 13:28:53 UTC +00:00], ["description", "Total 0% Greek Strained Nonfat Yogurt"], ["image", nil], ["imagethumb", nil], ["ingredients", "Grade A Pasteurized Skimmed Milk, Live Active Yogurt Cultures (L. Bulgaricus, S. Thermophilus, L. Acidophilus, Bifidus, L. Casei)."], ["manufacturer", ""], ["size", "6"], ["units", "Oz"], ["upc", "689544080008"], ["updated_at", Sun, 17 Aug 2014 13:28:53 UTC +00:00]]
+  [1m[36m (1.7ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.4ms)[0m  [1mUPDATE "items" SET "image" = 'https://s3.amazonaws.com/simpleupc-images/g1/full/4e0f6da0a2dc8a0e.jpg', "imagethumb" = 'https://s3.amazonaws.com/simpleupc-images/g1/thumb/4e0f6da0a2dc8a0e.jpg', "updated_at" = '2014-08-17 13:28:53.973893' WHERE "items"."id" = 33[0m
+  [1m[35m (1.9ms)[0m  commit transaction
+Completed 200 OK in 1360.8ms (ActiveRecord: 80.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-08-17 09:51:38 -0400
+Processing by UsersController#new as HTML
+  Rendered users/_form.html.erb (3.0ms)
+  Rendered users/new.html.erb within layouts/application (3.7ms)
+Completed 200 OK in 14.8ms (Views: 8.7ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-08-17 09:51:38 -0400
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/pages.css?body=1" for 127.0.0.1 at 2014-08-17 09:51:38 -0400
+Served asset /pages.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-08-17 09:51:38 -0400
+Served asset /scaffolds.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-08-17 09:51:38 -0400
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/pages.js?body=1" for 127.0.0.1 at 2014-08-17 09:51:38 -0400
+Served asset /pages.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-08-17 09:51:38 -0400
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-08-17 09:51:38 -0400
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/us" for 127.0.0.1 at 2014-08-17 09:51:43 -0400
+
+ActionController::RoutingError (No route matches [GET] "/us"):
+  actionpack (3.2.16) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (3.2.16) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.16) lib/rails/rack/logger.rb:32:in `call_app'
+  railties (3.2.16) lib/rails/rack/logger.rb:16:in `block in call'
+  activesupport (3.2.16) lib/active_support/tagged_logging.rb:22:in `tagged'
+  railties (3.2.16) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.16) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.5) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.5) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.16) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.5) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.16) lib/action_dispatch/middleware/static.rb:63:in `call'
+  railties (3.2.16) lib/rails/engine.rb:484:in `call'
+  railties (3.2.16) lib/rails/application.rb:231:in `call'
+  rack (1.4.5) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.16) lib/rails/rack/log_tailer.rb:17:in `call'
+  rack (1.4.5) lib/rack/handler/webrick.rb:59:in `service'
+  /Users/ndhingra/.rvm/rubies/ruby-2.1.1/lib/ruby/2.1.0/webrick/httpserver.rb:138:in `service'
+  /Users/ndhingra/.rvm/rubies/ruby-2.1.1/lib/ruby/2.1.0/webrick/httpserver.rb:94:in `run'
+  /Users/ndhingra/.rvm/rubies/ruby-2.1.1/lib/ruby/2.1.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /Users/ndhingra/.rvm/gems/ruby-2.1.1/gems/actionpack-3.2.16/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.0ms)
+
+
+Started GET "/users" for 127.0.0.1 at 2014-08-17 09:51:44 -0400
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT "users".* FROM "users" [0m
+  Rendered users/index.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 14.1ms (Views: 13.1ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-08-17 09:51:45 -0400
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/pages.js?body=1" for 127.0.0.1 at 2014-08-17 09:51:45 -0400
+Served asset /pages.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/pages.css?body=1" for 127.0.0.1 at 2014-08-17 09:51:45 -0400
+Served asset /pages.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-08-17 09:51:45 -0400
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-08-17 09:51:45 -0400
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-08-17 09:51:45 -0400
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-08-17 09:51:45 -0400
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/users/new" for 127.0.0.1 at 2014-08-17 09:51:47 -0400
+Processing by UsersController#new as HTML
+  Rendered users/_form.html.erb (2.4ms)
+  Rendered users/new.html.erb within layouts/application (3.2ms)
+Completed 200 OK in 7.8ms (Views: 7.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/pages.css?body=1" for 127.0.0.1 at 2014-08-17 09:51:47 -0400
+Served asset /pages.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-08-17 09:51:47 -0400
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-08-17 09:51:47 -0400
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/pages.js?body=1" for 127.0.0.1 at 2014-08-17 09:51:47 -0400
+Served asset /pages.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-08-17 09:51:47 -0400
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-08-17 09:51:47 -0400
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-08-17 09:51:47 -0400
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2014-08-17 09:51:53 -0400
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"S8sqU0vVK06rH74g31Ji/IJVbsJjEbjvwGy0fPBiGU4=", "user"=>{"name"=>"Nisha", "email"=>"nishabatra27@gmail.com", "phone"=>"+19174990390"}, "commit"=>"Create User"}
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mUser Exists (0.2ms)[0m  [1mSELECT 1 AS one FROM "users" WHERE "users"."email" = 'nishabatra27@gmail.com' LIMIT 1[0m
+  [1m[35mUser Exists (0.1ms)[0m  SELECT 1 AS one FROM "users" WHERE "users"."phone" = '+19174990390' LIMIT 1
+  [1m[36mSQL (0.5ms)[0m  [1mINSERT INTO "users" ("created_at", "email", "name", "phone", "updated_at", "verified") VALUES (?, ?, ?, ?, ?, ?)[0m  [["created_at", Sun, 17 Aug 2014 13:51:53 UTC +00:00], ["email", "nishabatra27@gmail.com"], ["name", "Nisha"], ["phone", "+19174990390"], ["updated_at", Sun, 17 Aug 2014 13:51:53 UTC +00:00], ["verified", nil]]
+  [1m[35m (1.1ms)[0m  commit transaction
+Completed 406 Not Acceptable in 1127.5ms (ActiveRecord: 1.9ms)
+
+
+Started POST "/verifications" for 127.0.0.1 at 2014-08-17 09:52:03 -0400
+Processing by VerificationsController#create as */*
+  Parameters: {"ToCountry"=>"US", "ToState"=>"CA", "SmsMessageSid"=>"SM9b83b642fcfc8d95ccba9ba730bfc386", "NumMedia"=>"0", "ToCity"=>"WOODSIDE", "FromZip"=>"10010", "SmsSid"=>"SM9b83b642fcfc8d95ccba9ba730bfc386", "FromState"=>"NY", "SmsStatus"=>"received", "FromCity"=>"NEW YORK", "Body"=>"No", "FromCountry"=>"US", "To"=>"+16504463368", "ToZip"=>"94062", "MessageSid"=>"SM9b83b642fcfc8d95ccba9ba730bfc386", "AccountSid"=>"ACcdf4226b4053c373dd92727345129b6c", "From"=>"+19174990390", "ApiVersion"=>"2010-04-01"}
+WARNING: Can't verify CSRF token authenticity
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."phone" = '+19174990390' LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "messages" ("body", "created_at", "from", "image", "item_requested", "upc", "updated_at", "user_id") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["body", "no"], ["created_at", Sun, 17 Aug 2014 13:52:03 UTC +00:00], ["from", nil], ["image", nil], ["item_requested", nil], ["upc", nil], ["updated_at", Sun, 17 Aug 2014 13:52:03 UTC +00:00], ["user_id", nil]]
+  [1m[35m (3.4ms)[0m  commit transaction
+Completed 200 OK in 459.1ms (ActiveRecord: 4.3ms)
+
+
+Started POST "/verifications" for 127.0.0.1 at 2014-08-17 09:52:07 -0400
+Processing by VerificationsController#create as */*
+  Parameters: {"ToCountry"=>"US", "ToState"=>"CA", "SmsMessageSid"=>"SMfdc6adee69bba83fc5d563eb29592791", "NumMedia"=>"0", "ToCity"=>"WOODSIDE", "FromZip"=>"10010", "SmsSid"=>"SMfdc6adee69bba83fc5d563eb29592791", "FromState"=>"NY", "SmsStatus"=>"received", "FromCity"=>"NEW YORK", "Body"=>"Yes", "FromCountry"=>"US", "To"=>"+16504463368", "ToZip"=>"94062", "MessageSid"=>"SMfdc6adee69bba83fc5d563eb29592791", "AccountSid"=>"ACcdf4226b4053c373dd92727345129b6c", "From"=>"+19174990390", "ApiVersion"=>"2010-04-01"}
+WARNING: Can't verify CSRF token authenticity
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."phone" = '+19174990390' LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "messages" ("body", "created_at", "from", "image", "item_requested", "upc", "updated_at", "user_id") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["body", "yes"], ["created_at", Sun, 17 Aug 2014 13:52:07 UTC +00:00], ["from", nil], ["image", nil], ["item_requested", nil], ["upc", nil], ["updated_at", Sun, 17 Aug 2014 13:52:07 UTC +00:00], ["user_id", nil]]
+  [1m[35m (2.4ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.2ms)[0m  UPDATE "users" SET "verified" = 't', "updated_at" = '2014-08-17 13:52:07.866320' WHERE "users"."id" = 40
+  [1m[36m (1.4ms)[0m  [1mcommit transaction[0m
+Completed 200 OK in 547.6ms (ActiveRecord: 4.6ms)
+
+
+Started POST "/verifications" for 127.0.0.1 at 2014-08-17 09:52:33 -0400
+Processing by VerificationsController#create as */*
+  Parameters: {"ToCountry"=>"US", "ToState"=>"CA", "SmsMessageSid"=>"SMfe1095090cfd0369e36cd8465960ce9f", "NumMedia"=>"0", "ToCity"=>"WOODSIDE", "FromZip"=>"10010", "SmsSid"=>"SMfe1095090cfd0369e36cd8465960ce9f", "FromState"=>"NY", "SmsStatus"=>"received", "FromCity"=>"NEW YORK", "Body"=>"8383", "FromCountry"=>"US", "To"=>"+16504463368", "ToZip"=>"94062", "MessageSid"=>"SMfe1095090cfd0369e36cd8465960ce9f", "AccountSid"=>"ACcdf4226b4053c373dd92727345129b6c", "From"=>"+19174990390", "ApiVersion"=>"2010-04-01"}
+WARNING: Can't verify CSRF token authenticity
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."phone" = '+19174990390' LIMIT 1
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.9ms)[0m  INSERT INTO "messages" ("body", "created_at", "from", "image", "item_requested", "upc", "updated_at", "user_id") VALUES (?, ?, ?, ?, ?, ?, ?, ?)  [["body", "8383"], ["created_at", Sun, 17 Aug 2014 13:52:33 UTC +00:00], ["from", nil], ["image", nil], ["item_requested", nil], ["upc", nil], ["updated_at", Sun, 17 Aug 2014 13:52:33 UTC +00:00], ["user_id", nil]]
+  [1m[36m (3.2ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "items" ("ProductHasImage", "ProductHasNutritionFacts", "brand", "catID", "category", "container", "created_at", "description", "image", "imagethumb", "ingredients", "manufacturer", "size", "units", "upc", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["ProductHasImage", nil], ["ProductHasNutritionFacts", nil], ["brand", nil], ["catID", nil], ["category", nil], ["container", nil], ["created_at", Sun, 17 Aug 2014 13:52:34 UTC +00:00], ["description", nil], ["image", nil], ["imagethumb", nil], ["ingredients", nil], ["manufacturer", nil], ["size", nil], ["units", nil], ["upc", nil], ["updated_at", Sun, 17 Aug 2014 13:52:34 UTC +00:00]]
+  [1m[35m (3.2ms)[0m  commit transaction
+Completed 500 Internal Server Error in 1356.3ms
+
+Twilio::REST::RequestError (A 'To' phone number is required.):
+  app/controllers/verifications_controller.rb:95:in `create'
+
+
+  Rendered /Users/ndhingra/.rvm/gems/ruby-2.1.1/gems/actionpack-3.2.16/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.2ms)
+  Rendered /Users/ndhingra/.rvm/gems/ruby-2.1.1/gems/actionpack-3.2.16/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.1ms)
+  Rendered /Users/ndhingra/.rvm/gems/ruby-2.1.1/gems/actionpack-3.2.16/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (9.2ms)
+
+
+Started POST "/verifications" for 127.0.0.1 at 2014-08-17 09:52:49 -0400
+Processing by VerificationsController#create as */*
+  Parameters: {"ToCountry"=>"US", "ToState"=>"CA", "SmsMessageSid"=>"SM1ffec5225f3e44545c1e70dbb90d7b39", "NumMedia"=>"0", "ToCity"=>"WOODSIDE", "FromZip"=>"10010", "SmsSid"=>"SM1ffec5225f3e44545c1e70dbb90d7b39", "FromState"=>"NY", "SmsStatus"=>"received", "FromCity"=>"NEW YORK", "Body"=>"689544080008", "FromCountry"=>"US", "To"=>"+16504463368", "ToZip"=>"94062", "MessageSid"=>"SM1ffec5225f3e44545c1e70dbb90d7b39", "AccountSid"=>"ACcdf4226b4053c373dd92727345129b6c", "From"=>"+19174990390", "ApiVersion"=>"2010-04-01"}
+WARNING: Can't verify CSRF token authenticity
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."phone" = '+19174990390' LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "messages" ("body", "created_at", "from", "image", "item_requested", "upc", "updated_at", "user_id") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["body", "689544080008"], ["created_at", Sun, 17 Aug 2014 13:52:49 UTC +00:00], ["from", nil], ["image", nil], ["item_requested", nil], ["upc", nil], ["updated_at", Sun, 17 Aug 2014 13:52:49 UTC +00:00], ["user_id", nil]]
+  [1m[35m (2.4ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.6ms)[0m  INSERT INTO "items" ("ProductHasImage", "ProductHasNutritionFacts", "brand", "catID", "category", "container", "created_at", "description", "image", "imagethumb", "ingredients", "manufacturer", "size", "units", "upc", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)  [["ProductHasImage", true], ["ProductHasNutritionFacts", true], ["brand", "Fage"], ["catID", "702100"], ["category", "Yogurt"], ["container", "Plastic Container"], ["created_at", Sun, 17 Aug 2014 13:52:49 UTC +00:00], ["description", "Total 0% Greek Strained Nonfat Yogurt"], ["image", nil], ["imagethumb", nil], ["ingredients", "Grade A Pasteurized Skimmed Milk, Live Active Yogurt Cultures (L. Bulgaricus, S. Thermophilus, L. Acidophilus, Bifidus, L. Casei)."], ["manufacturer", ""], ["size", "6"], ["units", "Oz"], ["upc", "689544080008"], ["updated_at", Sun, 17 Aug 2014 13:52:49 UTC +00:00]]
+  [1m[36m (1.6ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.4ms)[0m  [1mUPDATE "items" SET "image" = 'https://s3.amazonaws.com/simpleupc-images/g1/full/4e0f6da0a2dc8a0e.jpg', "imagethumb" = 'https://s3.amazonaws.com/simpleupc-images/g1/thumb/4e0f6da0a2dc8a0e.jpg', "updated_at" = '2014-08-17 13:52:49.779955' WHERE "items"."id" = 35[0m
+  [1m[35m (2.6ms)[0m  commit transaction
+Completed 500 Internal Server Error in 817.9ms
+
+Twilio::REST::RequestError (A 'To' phone number is required.):
+  app/controllers/verifications_controller.rb:95:in `create'
+
+
+  Rendered /Users/ndhingra/.rvm/gems/ruby-2.1.1/gems/actionpack-3.2.16/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.2ms)
+  Rendered /Users/ndhingra/.rvm/gems/ruby-2.1.1/gems/actionpack-3.2.16/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.2ms)
+  Rendered /Users/ndhingra/.rvm/gems/ruby-2.1.1/gems/actionpack-3.2.16/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (7.8ms)
+
+
+Started POST "/verifications" for 127.0.0.1 at 2014-08-17 09:53:08 -0400
+Processing by VerificationsController#create as */*
+  Parameters: {"ToCountry"=>"US", "ToState"=>"CA", "SmsMessageSid"=>"SM50dfbbe85145b1ba4ebda64540d19abc", "NumMedia"=>"0", "ToCity"=>"WOODSIDE", "FromZip"=>"10010", "SmsSid"=>"SM50dfbbe85145b1ba4ebda64540d19abc", "FromState"=>"NY", "SmsStatus"=>"received", "FromCity"=>"NEW YORK", "Body"=>"Milk", "FromCountry"=>"US", "To"=>"+16504463368", "ToZip"=>"94062", "MessageSid"=>"SM50dfbbe85145b1ba4ebda64540d19abc", "AccountSid"=>"ACcdf4226b4053c373dd92727345129b6c", "From"=>"+19174990390", "ApiVersion"=>"2010-04-01"}
+WARNING: Can't verify CSRF token authenticity
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."phone" = '+19174990390' LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "messages" ("body", "created_at", "from", "image", "item_requested", "upc", "updated_at", "user_id") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["body", "milk"], ["created_at", Sun, 17 Aug 2014 13:53:08 UTC +00:00], ["from", nil], ["image", nil], ["item_requested", nil], ["upc", nil], ["updated_at", Sun, 17 Aug 2014 13:53:08 UTC +00:00], ["user_id", nil]]
+  [1m[35m (2.3ms)[0m  commit transaction
+Completed 500 Internal Server Error in 432.7ms
+
+Twilio::REST::RequestError (A 'To' phone number is required.):
+  app/controllers/verifications_controller.rb:95:in `create'
+
+
+  Rendered /Users/ndhingra/.rvm/gems/ruby-2.1.1/gems/actionpack-3.2.16/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.1ms)
+  Rendered /Users/ndhingra/.rvm/gems/ruby-2.1.1/gems/actionpack-3.2.16/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.0ms)
+  Rendered /Users/ndhingra/.rvm/gems/ruby-2.1.1/gems/actionpack-3.2.16/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (7.2ms)
+
+
+Started POST "/verifications" for 127.0.0.1 at 2014-08-17 09:56:03 -0400
+Processing by VerificationsController#create as */*
+  Parameters: {"ToCountry"=>"US", "ToState"=>"CA", "SmsMessageSid"=>"SMa3f6c8e4a26464c800d918c3100c3efe", "NumMedia"=>"0", "ToCity"=>"WOODSIDE", "FromZip"=>"10010", "SmsSid"=>"SMa3f6c8e4a26464c800d918c3100c3efe", "FromState"=>"NY", "SmsStatus"=>"received", "FromCity"=>"NEW YORK", "Body"=>"689544080008", "FromCountry"=>"US", "To"=>"+16504463368", "ToZip"=>"94062", "MessageSid"=>"SMa3f6c8e4a26464c800d918c3100c3efe", "AccountSid"=>"ACcdf4226b4053c373dd92727345129b6c", "From"=>"+19174990390", "ApiVersion"=>"2010-04-01"}
+WARNING: Can't verify CSRF token authenticity
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."phone" = '+19174990390' LIMIT 1[0m
+  [1m[35m (0.3ms)[0m  begin transaction
+  [1m[36mSQL (0.7ms)[0m  [1mINSERT INTO "messages" ("body", "created_at", "from", "image", "item_requested", "upc", "updated_at", "user_id") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["body", "689544080008"], ["created_at", Sun, 17 Aug 2014 13:56:03 UTC +00:00], ["from", nil], ["image", nil], ["item_requested", nil], ["upc", nil], ["updated_at", Sun, 17 Aug 2014 13:56:03 UTC +00:00], ["user_id", nil]]
+  [1m[35m (3.8ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "items" ("ProductHasImage", "ProductHasNutritionFacts", "brand", "catID", "category", "container", "created_at", "description", "image", "imagethumb", "ingredients", "manufacturer", "size", "units", "upc", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)  [["ProductHasImage", true], ["ProductHasNutritionFacts", true], ["brand", "Fage"], ["catID", "702100"], ["category", "Yogurt"], ["container", "Plastic Container"], ["created_at", Sun, 17 Aug 2014 13:56:03 UTC +00:00], ["description", "Total 0% Greek Strained Nonfat Yogurt"], ["image", nil], ["imagethumb", nil], ["ingredients", "Grade A Pasteurized Skimmed Milk, Live Active Yogurt Cultures (L. Bulgaricus, S. Thermophilus, L. Acidophilus, Bifidus, L. Casei)."], ["manufacturer", ""], ["size", "6"], ["units", "Oz"], ["upc", "689544080008"], ["updated_at", Sun, 17 Aug 2014 13:56:03 UTC +00:00]]
+  [1m[36m (2.9ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.4ms)[0m  [1mUPDATE "items" SET "image" = 'https://s3.amazonaws.com/simpleupc-images/g1/full/4e0f6da0a2dc8a0e.jpg', "imagethumb" = 'https://s3.amazonaws.com/simpleupc-images/g1/thumb/4e0f6da0a2dc8a0e.jpg', "updated_at" = '2014-08-17 13:56:04.703946' WHERE "items"."id" = 36[0m
+  [1m[35m (2.7ms)[0m  commit transaction
+Completed 500 Internal Server Error in 2579.0ms
+
+Twilio::REST::RequestError (A 'To' phone number is required.):
+  app/controllers/verifications_controller.rb:94:in `create'
+
+
+  Rendered /Users/ndhingra/.rvm/gems/ruby-2.1.1/gems/actionpack-3.2.16/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.0ms)
+  Rendered /Users/ndhingra/.rvm/gems/ruby-2.1.1/gems/actionpack-3.2.16/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.9ms)
+  Rendered /Users/ndhingra/.rvm/gems/ruby-2.1.1/gems/actionpack-3.2.16/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (7.0ms)
+
+
+Started POST "/verifications" for 127.0.0.1 at 2014-08-17 09:56:53 -0400
+Processing by VerificationsController#create as */*
+  Parameters: {"ToCountry"=>"US", "ToState"=>"CA", "SmsMessageSid"=>"SM5f9cc0237224d6035e05c641e9578d9d", "NumMedia"=>"0", "ToCity"=>"WOODSIDE", "FromZip"=>"10010", "SmsSid"=>"SM5f9cc0237224d6035e05c641e9578d9d", "FromState"=>"NY", "SmsStatus"=>"received", "FromCity"=>"NEW YORK", "Body"=>"689544080008", "FromCountry"=>"US", "To"=>"+16504463368", "ToZip"=>"94062", "MessageSid"=>"SM5f9cc0237224d6035e05c641e9578d9d", "AccountSid"=>"ACcdf4226b4053c373dd92727345129b6c", "From"=>"+19174990390", "ApiVersion"=>"2010-04-01"}
+WARNING: Can't verify CSRF token authenticity
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."phone" = '+19174990390' LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "messages" ("body", "created_at", "from", "image", "item_requested", "upc", "updated_at", "user_id") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["body", "689544080008"], ["created_at", Sun, 17 Aug 2014 13:56:53 UTC +00:00], ["from", nil], ["image", nil], ["item_requested", nil], ["upc", nil], ["updated_at", Sun, 17 Aug 2014 13:56:53 UTC +00:00], ["user_id", nil]]
+  [1m[35m (2.3ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "items" ("ProductHasImage", "ProductHasNutritionFacts", "brand", "catID", "category", "container", "created_at", "description", "image", "imagethumb", "ingredients", "manufacturer", "size", "units", "upc", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)  [["ProductHasImage", true], ["ProductHasNutritionFacts", true], ["brand", "Fage"], ["catID", "702100"], ["category", "Yogurt"], ["container", "Plastic Container"], ["created_at", Sun, 17 Aug 2014 13:56:53 UTC +00:00], ["description", "Total 0% Greek Strained Nonfat Yogurt"], ["image", nil], ["imagethumb", nil], ["ingredients", "Grade A Pasteurized Skimmed Milk, Live Active Yogurt Cultures (L. Bulgaricus, S. Thermophilus, L. Acidophilus, Bifidus, L. Casei)."], ["manufacturer", ""], ["size", "6"], ["units", "Oz"], ["upc", "689544080008"], ["updated_at", Sun, 17 Aug 2014 13:56:53 UTC +00:00]]
+  [1m[36m (1.9ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.4ms)[0m  [1mUPDATE "items" SET "image" = 'https://s3.amazonaws.com/simpleupc-images/g1/full/4e0f6da0a2dc8a0e.jpg', "imagethumb" = 'https://s3.amazonaws.com/simpleupc-images/g1/thumb/4e0f6da0a2dc8a0e.jpg', "updated_at" = '2014-08-17 13:56:54.417625' WHERE "items"."id" = 37[0m
+  [1m[35m (2.4ms)[0m  commit transaction
+Completed 200 OK in 2207.3ms (ActiveRecord: 9.4ms)
+
+
+Started POST "/verifications" for 127.0.0.1 at 2014-08-17 09:57:17 -0400
+Processing by VerificationsController#create as */*
+  Parameters: {"ToCountry"=>"US", "ToState"=>"CA", "SmsMessageSid"=>"SM586f70c1e7da89237b4509160faaaf8c", "NumMedia"=>"0", "ToCity"=>"WOODSIDE", "FromZip"=>"10010", "SmsSid"=>"SM586f70c1e7da89237b4509160faaaf8c", "FromState"=>"NY", "SmsStatus"=>"received", "FromCity"=>"NEW YORK", "Body"=>"689544080008", "FromCountry"=>"US", "To"=>"+16504463368", "ToZip"=>"94062", "MessageSid"=>"SM586f70c1e7da89237b4509160faaaf8c", "AccountSid"=>"ACcdf4226b4053c373dd92727345129b6c", "From"=>"+19174990390", "ApiVersion"=>"2010-04-01"}
+WARNING: Can't verify CSRF token authenticity
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."phone" = '+19174990390' LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "messages" ("body", "created_at", "from", "image", "item_requested", "upc", "updated_at", "user_id") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["body", "689544080008"], ["created_at", Sun, 17 Aug 2014 13:57:17 UTC +00:00], ["from", nil], ["image", nil], ["item_requested", nil], ["upc", nil], ["updated_at", Sun, 17 Aug 2014 13:57:17 UTC +00:00], ["user_id", nil]]
+  [1m[35m (2.4ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.6ms)[0m  INSERT INTO "items" ("ProductHasImage", "ProductHasNutritionFacts", "brand", "catID", "category", "container", "created_at", "description", "image", "imagethumb", "ingredients", "manufacturer", "size", "units", "upc", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)  [["ProductHasImage", true], ["ProductHasNutritionFacts", true], ["brand", "Fage"], ["catID", "702100"], ["category", "Yogurt"], ["container", "Plastic Container"], ["created_at", Sun, 17 Aug 2014 13:57:18 UTC +00:00], ["description", "Total 0% Greek Strained Nonfat Yogurt"], ["image", nil], ["imagethumb", nil], ["ingredients", "Grade A Pasteurized Skimmed Milk, Live Active Yogurt Cultures (L. Bulgaricus, S. Thermophilus, L. Acidophilus, Bifidus, L. Casei)."], ["manufacturer", ""], ["size", "6"], ["units", "Oz"], ["upc", "689544080008"], ["updated_at", Sun, 17 Aug 2014 13:57:18 UTC +00:00]]
+  [1m[36m (2.5ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.3ms)[0m  [1mUPDATE "items" SET "image" = 'https://s3.amazonaws.com/simpleupc-images/g1/full/4e0f6da0a2dc8a0e.jpg', "imagethumb" = 'https://s3.amazonaws.com/simpleupc-images/g1/thumb/4e0f6da0a2dc8a0e.jpg', "updated_at" = '2014-08-17 13:57:19.247327' WHERE "items"."id" = 38[0m
+  [1m[35m (2.4ms)[0m  commit transaction
+Completed 200 OK in 2277.2ms (ActiveRecord: 10.2ms)
+
+
+Started POST "/verifications" for 127.0.0.1 at 2014-08-17 09:57:49 -0400
+Processing by VerificationsController#create as */*
+  Parameters: {"ToCountry"=>"US", "ToState"=>"CA", "SmsMessageSid"=>"SM06ead8ca75499b8cd6b6a780319ee512", "NumMedia"=>"0", "ToCity"=>"WOODSIDE", "FromZip"=>"10010", "SmsSid"=>"SM06ead8ca75499b8cd6b6a780319ee512", "FromState"=>"NY", "SmsStatus"=>"received", "FromCity"=>"NEW YORK", "Body"=>"555", "FromCountry"=>"US", "To"=>"+16504463368", "ToZip"=>"94062", "MessageSid"=>"SM06ead8ca75499b8cd6b6a780319ee512", "AccountSid"=>"ACcdf4226b4053c373dd92727345129b6c", "From"=>"+19174990390", "ApiVersion"=>"2010-04-01"}
+WARNING: Can't verify CSRF token authenticity
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."phone" = '+19174990390' LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "messages" ("body", "created_at", "from", "image", "item_requested", "upc", "updated_at", "user_id") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["body", "555"], ["created_at", Sun, 17 Aug 2014 13:57:49 UTC +00:00], ["from", nil], ["image", nil], ["item_requested", nil], ["upc", nil], ["updated_at", Sun, 17 Aug 2014 13:57:49 UTC +00:00], ["user_id", nil]]
+  [1m[35m (2.4ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO "items" ("ProductHasImage", "ProductHasNutritionFacts", "brand", "catID", "category", "container", "created_at", "description", "image", "imagethumb", "ingredients", "manufacturer", "size", "units", "upc", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)  [["ProductHasImage", nil], ["ProductHasNutritionFacts", nil], ["brand", nil], ["catID", nil], ["category", nil], ["container", nil], ["created_at", Sun, 17 Aug 2014 13:57:49 UTC +00:00], ["description", nil], ["image", nil], ["imagethumb", nil], ["ingredients", nil], ["manufacturer", nil], ["size", nil], ["units", nil], ["upc", nil], ["updated_at", Sun, 17 Aug 2014 13:57:49 UTC +00:00]]
+  [1m[36m (1.4ms)[0m  [1mcommit transaction[0m
+Completed 500 Internal Server Error in 610.5ms
+
+Twilio::REST::RequestError (Message body is required.):
+  app/controllers/verifications_controller.rb:95:in `create'
+
+
+  Rendered /Users/ndhingra/.rvm/gems/ruby-2.1.1/gems/actionpack-3.2.16/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.0ms)
+  Rendered /Users/ndhingra/.rvm/gems/ruby-2.1.1/gems/actionpack-3.2.16/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.0ms)
+  Rendered /Users/ndhingra/.rvm/gems/ruby-2.1.1/gems/actionpack-3.2.16/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (7.4ms)
+
+
+Started POST "/verifications" for 127.0.0.1 at 2014-08-17 09:58:31 -0400
+Processing by VerificationsController#create as */*
+  Parameters: {"ToCountry"=>"US", "ToState"=>"CA", "SmsMessageSid"=>"SM93ab4ca83c22a8638e449c2d28a4bda7", "NumMedia"=>"0", "ToCity"=>"WOODSIDE", "FromZip"=>"10010", "SmsSid"=>"SM93ab4ca83c22a8638e449c2d28a4bda7", "FromState"=>"NY", "SmsStatus"=>"received", "FromCity"=>"NEW YORK", "Body"=>"666", "FromCountry"=>"US", "To"=>"+16504463368", "ToZip"=>"94062", "MessageSid"=>"SM93ab4ca83c22a8638e449c2d28a4bda7", "AccountSid"=>"ACcdf4226b4053c373dd92727345129b6c", "From"=>"+19174990390", "ApiVersion"=>"2010-04-01"}
+WARNING: Can't verify CSRF token authenticity
+  [1m[35mUser Load (0.1ms)[0m  SELECT "users".* FROM "users" WHERE "users"."phone" = '+19174990390' LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "messages" ("body", "created_at", "from", "image", "item_requested", "upc", "updated_at", "user_id") VALUES (?, ?, ?, ?, ?, ?, ?, ?)  [["body", "666"], ["created_at", Sun, 17 Aug 2014 13:58:31 UTC +00:00], ["from", nil], ["image", nil], ["item_requested", nil], ["upc", nil], ["updated_at", Sun, 17 Aug 2014 13:58:31 UTC +00:00], ["user_id", nil]]
+  [1m[36m (2.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.6ms)[0m  [1mINSERT INTO "items" ("ProductHasImage", "ProductHasNutritionFacts", "brand", "catID", "category", "container", "created_at", "description", "image", "imagethumb", "ingredients", "manufacturer", "size", "units", "upc", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["ProductHasImage", nil], ["ProductHasNutritionFacts", nil], ["brand", nil], ["catID", nil], ["category", nil], ["container", nil], ["created_at", Sun, 17 Aug 2014 13:58:32 UTC +00:00], ["description", nil], ["image", nil], ["imagethumb", nil], ["ingredients", nil], ["manufacturer", nil], ["size", nil], ["units", nil], ["upc", nil], ["updated_at", Sun, 17 Aug 2014 13:58:32 UTC +00:00]]
+  [1m[35m (2.0ms)[0m  commit transaction
+Completed 500 Internal Server Error in 1357.6ms
+
+Twilio::REST::RequestError (Message body is required.):
+  app/controllers/verifications_controller.rb:97:in `create'
+
+
+  Rendered /Users/ndhingra/.rvm/gems/ruby-2.1.1/gems/actionpack-3.2.16/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.0ms)
+  Rendered /Users/ndhingra/.rvm/gems/ruby-2.1.1/gems/actionpack-3.2.16/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.0ms)
+  Rendered /Users/ndhingra/.rvm/gems/ruby-2.1.1/gems/actionpack-3.2.16/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (7.1ms)
+
+
+Started POST "/verifications" for 127.0.0.1 at 2014-08-17 09:58:45 -0400
+Processing by VerificationsController#create as */*
+  Parameters: {"ToCountry"=>"US", "ToState"=>"CA", "SmsMessageSid"=>"SM2e9f7865dcef471d21cd52644ce51f61", "NumMedia"=>"0", "ToCity"=>"WOODSIDE", "FromZip"=>"10010", "SmsSid"=>"SM2e9f7865dcef471d21cd52644ce51f61", "FromState"=>"NY", "SmsStatus"=>"received", "FromCity"=>"NEW YORK", "Body"=>"55", "FromCountry"=>"US", "To"=>"+16504463368", "ToZip"=>"94062", "MessageSid"=>"SM2e9f7865dcef471d21cd52644ce51f61", "AccountSid"=>"ACcdf4226b4053c373dd92727345129b6c", "From"=>"+19174990390", "ApiVersion"=>"2010-04-01"}
+WARNING: Can't verify CSRF token authenticity
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."phone" = '+19174990390' LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "messages" ("body", "created_at", "from", "image", "item_requested", "upc", "updated_at", "user_id") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["body", "55"], ["created_at", Sun, 17 Aug 2014 13:58:45 UTC +00:00], ["from", nil], ["image", nil], ["item_requested", nil], ["upc", nil], ["updated_at", Sun, 17 Aug 2014 13:58:45 UTC +00:00], ["user_id", nil]]
+  [1m[35m (3.8ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "items" ("ProductHasImage", "ProductHasNutritionFacts", "brand", "catID", "category", "container", "created_at", "description", "image", "imagethumb", "ingredients", "manufacturer", "size", "units", "upc", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)  [["ProductHasImage", nil], ["ProductHasNutritionFacts", nil], ["brand", nil], ["catID", nil], ["category", nil], ["container", nil], ["created_at", Sun, 17 Aug 2014 13:58:45 UTC +00:00], ["description", nil], ["image", nil], ["imagethumb", nil], ["ingredients", nil], ["manufacturer", nil], ["size", nil], ["units", nil], ["upc", nil], ["updated_at", Sun, 17 Aug 2014 13:58:45 UTC +00:00]]
+  [1m[36m (2.0ms)[0m  [1mcommit transaction[0m
+Completed 200 OK in 811.7ms (ActiveRecord: 8.0ms)
