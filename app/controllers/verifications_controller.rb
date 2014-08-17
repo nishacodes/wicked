@@ -42,63 +42,77 @@ class VerificationsController < ApplicationController
         # 689544080008  
         uri = URI("http://api.simpleupc.com/v1.php?auth=gqA1YvUeSLhWA6h5dvICvzUaYe3Dff8M&method=FetchProductByUPC&upc=#{@message.upc}&returnFormat=json")
         res = Net::HTTP.get_response(uri)
-        
+        puts "&&&&"
+        puts res
         # if there's results, save it in the items database
         if res.body
+
           item_info = JSON.parse(res.body)["result"]
-          @item = Item.create(item_info)
-          
+          if item_info 
+             @item = Item.create(item_info)
 
-          puts "-----"
-          puts @item.brand 
-          puts @item.category
-          # save nutrition info in a hash
-          if @item.ProductHasNutritionFacts == true
-            nutritionUri = URI("http://api.simpleupc.com/v1.php?auth=gqA1YvUeSLhWA6h5dvICvzUaYe3Dff8M&method=FetchNutritionFactsByUPC&upc=#{@item.upc}")
-            nutritionfacts = Net::HTTP.get_response(nutritionUri)
-            @item.nutrition = JSON.parse(nutritionfacts.body)["result"]
-          end
+            
 
-          # save image to db
-          if @item.ProductHasImage == true
-            imageUri = URI("http://api.simpleupc.com/v1.php?auth=gqA1YvUeSLhWA6h5dvICvzUaYe3Dff8M&method=FetchImageByUPC&upc=#{@item.upc}")
-            image = Net::HTTP.get_response(imageUri)
+            puts "-----"
+            puts @item.brand 
+            puts @item.category
+            # save nutrition info in a hash
+            if @item.ProductHasNutritionFacts == true
+              nutritionUri = URI("http://api.simpleupc.com/v1.php?auth=gqA1YvUeSLhWA6h5dvICvzUaYe3Dff8M&method=FetchNutritionFactsByUPC&upc=#{@item.upc}")
+              nutritionfacts = Net::HTTP.get_response(nutritionUri)
+              @item.nutrition = JSON.parse(nutritionfacts.body)["result"]
+            end
 
-            result = JSON.parse(image.body)["result"]
+            # save image to db
+            if @item.ProductHasImage == true
+              imageUri = URI("http://api.simpleupc.com/v1.php?auth=gqA1YvUeSLhWA6h5dvICvzUaYe3Dff8M&method=FetchImageByUPC&upc=#{@item.upc}")
+              image = Net::HTTP.get_response(imageUri)
 
-            @item.image = result["imageURL"]
-            @item.imagethumb = result["imageThumbURL"]
-            @item.save
+              result = JSON.parse(image.body)["result"]
+
+              @item.image = result["imageURL"]
+              @item.imagethumb = result["imageThumbURL"]
+              @item.save
+            end
           end
         end
 
         # if an item got saved, prep the response
-        if (@item.brand && @item.description)
+        if @item
           @itemRequest = @item.brand + " " + @item.description
           @response = "You requested #{@itemRequest}. Let me see if that is approved..."
           # INSERT LOGIC FOR DETERMINING IF IT IS WIC APPROVED 
           # @response =
+          # link to view of item page
         else
           @response = "Hmm, I could not find an item with that UPC number. Please try again."
         end
 
       # DETERMINE RESPONSE WITH GENERIC REQUEST
       elsif @message.item_requested
-        
+        @response = "You want #{@message.item_requested}, eh? Let me see what I can find."
+
+        # INSERT LOGIC TO SEARCH CATEGORIES FOR ITEM REQUESTED
+        # Milk is a great choice! We found X types of milk approved by WIC. Click here to see them.
+        # I'm sorry, milk is not approved by WIC. You might try... ???
+        # link to view of results page 
       end
       
-      # Send this response after parsing
-      puts @response
+    else 
+      @response = "Hey there, welcome to Plum!"
+
+      
     end
 
     puts "*********"
     puts @phone
     puts @response
+    # Send this response after parsing
     @client.account.sms.messages.create(
-            from: TWILIO_CONFIG['from'],
-            to: @phone,
-            body: @response
-      )
+      from: TWILIO_CONFIG['from'],
+      to: @phone,
+      body: @response
+    )
     head :ok
   end
 
