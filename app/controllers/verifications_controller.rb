@@ -196,6 +196,7 @@ class VerificationsController < ApplicationController
       #     end
       #   end
     # end
+    
     @items = Item.all
 
   end

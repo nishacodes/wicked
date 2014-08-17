@@ -3,7 +3,29 @@ body {
   height: 100%;
   font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
   color: #5A5758;
+  background-color: #50005A;
   
+}
+
+input {
+  height: 30px;
+  width: 200px;
+  font-size: 14px;
+}
+
+.signup {
+  padding-bottom: 20px;
+}
+
+.button input {
+  border: none;
+  box-shadow: none;
+  width: 120px;
+  height: 30px;
+  background-color: #f1dc72;
+  color: #50005A;
+  border-radius: 5px;
+  font-size: 14px;
 }
 .top-bar {
   width: 100%;
@@ -66,7 +88,7 @@ body {
 .activity-card > div:first-of-type {
   float: left;
   height: 100%;
-  width: 50%;
+  width: 20%;
 }
 .activity-card h2 { 
   margin: 10px;

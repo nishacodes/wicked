@@ -19,13 +19,17 @@
         </div>
         <div class="main-top" id="filter"><!-- <h1>Search</h1><h2>Filter</h2> --></div>
         <div>
-          <h1>Search results for 'juice'</h1>
+          <h1>Search results for 'WIC approved'</h1>
         <% @items.each do |item| %>
           <div class="activity-card">
             <!-- <div><div class="temp-img3" style="background-image: url('<%= item.imagethumb%>'); max-height: 100%;"></div>
             </div> -->
             <div><h2><%= item.brand + " " + item.description %></h2>
-              <span><img src="wic-stamp.png" style="padding: 5px; width: 40px;"><img src="vitc-stamp.png"style="padding: 5px; width: 40px;"> </span>
+              <span><img src="wic-stamp.png" style="padding: 5px; width: 40px;">
+                <% if item.id % 3 == 0 %>
+                <img src="vitc-stamp.png"style="padding: 5px; width: 40px;"> 
+                <% end %>
+              </span>
             </div>
             
           </div>
